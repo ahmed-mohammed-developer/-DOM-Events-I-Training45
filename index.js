@@ -40,12 +40,14 @@ button.addEventListener("click", () => {
 }, {
   once: true
 });
-const button1 = document.querySelector("button1");
-const result = document.querySelector("#result");
-const API = new FetchWrapper("https://jsdemo-3f387-default-rtdb.europe-west1.firebasedatabase.app");
-button1.addEventListener("click", () => {
-  API.get("/notifications/new.json").then(data => {
-    console.log(data);
-    result.textContent = data.message;
-  })
-})
+
+
+function number_sum(num) {
+  // write your code here
+  let sum = 0;
+  for (let i=1; i <= num; i++){
+    sum += i;
+  }
+  return sum;
+}
+console.log(number_sum(13))
